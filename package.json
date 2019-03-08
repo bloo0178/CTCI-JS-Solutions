@@ -1,0 +1,14 @@
+{
+  "name": "ctci-js-solutions",
+  "version": "0.1.0",
+  "description": "JavaScript solutions for Cracking the Code Interview problems.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^24.3.1"
+  }
+}
