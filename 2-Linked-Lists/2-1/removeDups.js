@@ -1,10 +1,28 @@
-const LinkedList = require('../linkedList'); 
+const Node = require('../node'); 
 
-function test() {
-    let test = new LinkedList();
-    test.add(5);
-    test.printList();
-    console.log(test.head);
+function removeDups(head) {
+    
+    let hash = {}; 
+    let cur = head; 
+
+    while(cur.next) {
+        if(cur.val in hash) {
+            // Need to change cur.next, NOT cur.val.
+            // This requires keeping a pointer to prev OR
+            // validating that there is a cur.next.next... 
+            cur.val = cur.next; 
+        } else {
+            hash[cur.val] = 1;
+        }
+        cur = cur.next;
+    }
+
+    return head; 
 }
 
-test();
+module.exports = removeDups; 
+
+/*
+-store values in hash table
+-
+*/

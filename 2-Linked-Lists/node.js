@@ -1,12 +1,12 @@
 class Node {
-  constructor(element) {
-    this.element = element;
+  constructor(val) {
+    this.val = val;
     this.next = null;
   }
 
-  add(element) {
-    var node = new Node(element);
-    var current;
+  add(val) {
+    var node = new Node(val);
+    var current = this;
     while (current.next) {
       current = current.next;
     }
