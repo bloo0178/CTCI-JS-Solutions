@@ -12,9 +12,7 @@ test('removeDups from end', () => {
     expectedResult.add(3);
 
     expect(removeDups(testList))
-    .toBe(expectedResult);
-    console.log(testList); 
-    console.log(expectedResult);
+    .toEqual(expectedResult);
 })
 
 test('removeDups from middle', () => {
@@ -28,7 +26,5 @@ test('removeDups from middle', () => {
     expectedResult.add(3);
 
     expect(removeDups(testList))
-    .toBe(expectedResult);
-    console.log(testList); 
-    console.log(expectedResult);
+    .toEqual(expectedResult);
 })

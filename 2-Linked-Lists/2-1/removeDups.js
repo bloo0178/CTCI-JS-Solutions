@@ -4,16 +4,15 @@ function removeDups(head) {
     
     let hash = {}; 
     let cur = head; 
+    let prev = null;
 
-    while(cur.next) {
+    while(cur) {
         if(cur.val in hash) {
-            // Need to change cur.next, NOT cur.val.
-            // This requires keeping a pointer to prev OR
-            // validating that there is a cur.next.next... 
-            cur.val = cur.next; 
+            prev.next = cur.next;
         } else {
             hash[cur.val] = 1;
         }
+        prev = cur;
         cur = cur.next;
     }
 
@@ -21,8 +20,3 @@ function removeDups(head) {
 }
 
 module.exports = removeDups; 
-
-/*
--store values in hash table
--
-*/
