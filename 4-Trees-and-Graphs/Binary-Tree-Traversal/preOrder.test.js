@@ -1,5 +1,5 @@
 const Node = require('../treeNode');
-const printInOrder = require('./inOrder');
+const printPreOrder = require('./preOrder.js');
 
 let testTree = new Node(1); 
 testTree.left = new Node(2);
@@ -21,6 +21,6 @@ testTree.right.right.left = new Node(0);
 */
 
 test('print test tree', () => {
-    expect(printInOrder(testTree))
-    .toEqual([3,2,4,1,6,5,0,7])
+    expect(printPreOrder(testTree))
+    .toEqual([1,2,3,4,5,6,7,0])
 })
