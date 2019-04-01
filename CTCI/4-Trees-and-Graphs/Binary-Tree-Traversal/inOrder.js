@@ -1,4 +1,4 @@
-const Node = require("../treeNode");
+
 
 /*function inOrder(node) {
     if(node !== null) {

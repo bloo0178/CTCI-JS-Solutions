@@ -1,4 +1,4 @@
-const Node = require('../node');
+const Node = require('../../../data-structures/listNode');
 const kthToLast = require('./kthToLast');
 
 test('second to last', () => {

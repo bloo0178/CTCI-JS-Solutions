@@ -1,5 +1,3 @@
-const Node = require('../node'); 
-
 function removeDups(head) {
     
     let hash = {}; 

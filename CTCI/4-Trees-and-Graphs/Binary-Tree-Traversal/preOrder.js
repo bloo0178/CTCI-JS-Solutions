@@ -1,5 +1,3 @@
-const Node = require("../treeNode");
-
 function printPreOrder(root) {
   result = [];
 

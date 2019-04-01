@@ -1,4 +1,4 @@
-const Node = require('./node'); 
+const Node = require('./listNode'); 
 
 test('Node', () => {
     let head = new Node(12); 

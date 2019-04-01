@@ -1,4 +1,4 @@
-const Node = require('../node');
+const Node = require('../../../data-structures/listNode');
 const deleteMiddleNode = require('./deleteMiddleNode');
 
 test('second to last', () => {

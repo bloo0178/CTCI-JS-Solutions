@@ -1,5 +1,3 @@
-const Node = require('../node'); 
-
 function kthToLast(k, head) {
 
     let count = 1; 

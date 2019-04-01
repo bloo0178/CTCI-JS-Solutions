@@ -1,4 +1,4 @@
-const Node = require('../treeNode');
+const Node = require("../../../data-structures/treeNode");
 const printPreOrder = require('./preOrder.js');
 
 let testTree = new Node(1); 

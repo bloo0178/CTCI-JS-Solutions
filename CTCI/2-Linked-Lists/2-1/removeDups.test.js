@@ -1,4 +1,4 @@
-const Node = require('../node');
+const Node = require('../../../data-structures/listNode');
 const removeDups = require('./removeDups');
 
 test('removeDups from end', () => {
