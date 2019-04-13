@@ -4,12 +4,12 @@ class Queue {
   }
 
   // add item to the end of the queue
-  add(item) {
+  enqueue(item) {
     this.items.push(item);
   }
 
   // remove the front item in the queue and return it
-  remove() {
+  dequeue() {
     if (this.isEmpty()) return false;
     return this.items.shift();
   }

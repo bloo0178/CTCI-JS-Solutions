@@ -7,7 +7,7 @@ test("isEmpty on empty", () => {
 });
 
 test("add(1) and peek", () => {
-  testQueue.add(1);
+  testQueue.enqueue(1);
   expect(testQueue.peek()).toBe(1);
 });
 
@@ -16,12 +16,12 @@ test("isEmpty on non-empty", () => {
 });
 
 test("add(2) and peek", () => {
-  testQueue.add(2);
+  testQueue.enqueue(2);
   expect(testQueue.peek()).toBe(1);
 });
 
 test("remove, remove, peek = false", () => {
-  testQueue.remove();
-  testQueue.remove();
+  testQueue.dequeue();
+  testQueue.dequeue();
   expect(testQueue.peek()).toBe(false);
 });
