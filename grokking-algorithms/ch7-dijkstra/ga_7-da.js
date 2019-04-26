@@ -1,24 +1,6 @@
 // node ga_7-da.js
 
-let graph = {};
-graph["start"] = {};
-graph["start"]["a"] = 6;
-graph["start"]["b"] = 2;
-graph["a"] = {};
-graph["a"]["finish"] = 1;
-graph["b"] = {};
-graph["b"]["a"] = 3;
-graph["b"]["finish"] = 5;
-graph["finish"] = {};
 
-const graph2 = {
-    start: { A: 5, B: 2 },
-    A: { C: 4, D: 2 },
-    B: { A: 8, D: 7 },
-    C: { D: 6, finish: 3 },
-    D: { finish: 1 },
-    finish: {}
-  };
 
 const lowestCostNode = (costs, processed) => {
   return Object.keys(costs).reduce((lowest, node) => {
@@ -85,5 +67,9 @@ const dijkstra = graph => {
   return results;
 };
 
+module.exports = dijkstra;
+
+/*
 console.log(dijkstra(graph));
 console.log(dijkstra(graph2));
+*/
