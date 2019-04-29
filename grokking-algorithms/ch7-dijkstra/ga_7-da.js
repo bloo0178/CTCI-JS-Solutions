@@ -1,7 +1,5 @@
 // node ga_7-da.js
 
-
-
 const lowestCostNode = (costs, processed) => {
   return Object.keys(costs).reduce((lowest, node) => {
     if (lowest === null || costs[node] < costs[lowest]) {
