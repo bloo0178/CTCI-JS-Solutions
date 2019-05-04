@@ -1,6 +1,7 @@
 const Node = require('../../../data-structures/listNode');
 const deleteMiddleNode = require('./deleteMiddleNode');
 
+
 test('second to last', () => {
     let testList = new Node(1);
     let nodeToDel = new Node(2); 
@@ -19,4 +20,30 @@ test('second to last', () => {
 
     expect(testList)
     .toEqual(expectedResult);
+})
+
+test('remove c from a>b>c>d>e>f', () => {
+    let testList = new Node('a');
+    testList.add('b');
+    testList.add('c');
+    //let nodeToDel = new Node('c');
+    //testList.next = nodeToDel;
+    testList.add('d');
+    testList.add('e');
+    testList.add('f');
+
+    let nodeToDel = testList.next.next;
+
+    console.log(nodeToDel);
+    console.log(testList);
+
+    deleteMiddleNode(nodeToDel);
+
+    let expectedResult = new Node('a');
+    expectedResult.add('b');
+    expectedResult.add('d');
+    expectedResult.add('e');
+    expectedResult.add('f');
+
+    expect(testList).toEqual(expectedResult);
 })

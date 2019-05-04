@@ -1,7 +1,7 @@
 {
   "name": "ctci-js-solutions",
   "version": "0.1.0",
-  "description": "JavaScript solutions for Cracking the Code Interview problems.",
+  "description": "JavaScript solutions data structures & algorithm problems.",
   "main": "index.js",
   "scripts": {
     "test": "jest"
