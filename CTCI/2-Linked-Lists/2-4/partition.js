@@ -1,5 +1,4 @@
-const Node = require('../../../data-structures/listNode');
-const printLinkedList = require('../../../utils/printLinkedList');
+const Node = require("../../../data-structures/listNode");
 
 /*
 
@@ -16,48 +15,34 @@ Hints: #3, #24
 
 */
 
-
-
 function partition(node, partition) {
-    let list1 = new Node(null);
-    let list2 = new Node(null);
-    let p1 = list1;
+  let list1 = new Node(null);
+  let list2 = new Node(null);
+  let p1 = list1;
 
-    while(node) {
-        if(node.val < partition) {
-            if(list1.val === null) {
-                list1.val = node.val; 
-                p1 = list1;
-            } else {
-                list1.add(node.val);
-                p1 = p1.next; 
-            }
-        } else if (node.val >= partition) {
-            if(list2.val === null) {
-                list2.val = node.val;
-            } else {
-                list2.add(node.val);
-            }
-        }
-        node = node.next;
+  while (node) {
+    if (node.val < partition) {
+      if (list1.val === null) {
+        list1.val = node.val;
+        p1 = list1;
+      } else {
+        list1.add(node.val);
+        p1 = p1.next;
+      }
+    } else if (node.val >= partition) {
+      if (list2.val === null) {
+        list2.val = node.val;
+      } else {
+        list2.add(node.val);
+      }
     }
+    node = node.next;
+  }
 
-    p1.next = new Node(partition); 
-    p1.next.next = list2; 
+  p1.next = new Node(partition);
+  p1.next.next = list2;
 
-    return printLinkedList(list1);
+  return list1;
 }
 
-
-let testList = new Node(1);
-testList.add(10);
-testList.add(2);
-testList.add(9);
-testList.add(3);
-testList.add(8);
-testList.add(4);
-testList.add(7);
-
-console.log(partition(testList, 5));
-
-module.exports = partition; 
+module.exports = partition;
