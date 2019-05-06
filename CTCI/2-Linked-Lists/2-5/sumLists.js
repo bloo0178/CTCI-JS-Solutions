@@ -1,6 +1,5 @@
 "use strict";
 const Node = require("../../../data-structures/listNode");
-const printLinkedList = require('../../../utils/printLinkedList');
 
 /*
 
@@ -23,9 +22,7 @@ function sumLists(node1, node2) {
   let node1Num = parseInt(convertListToRevArray(node1).join(""));
   let node2Num = parseInt(convertListToRevArray(node2).join(""));
   let sum = node1Num + node2Num;
-
   let res = convertIntToRevList(sum);
-
   return res;
 }
 
@@ -44,20 +41,15 @@ function convertIntToRevList(num) {
   let res, head;
   let numString = num + "";
   for (let i = numString.length - 1; i >= 0; i--) {
-      if (res == null) {
-          res = new Node(numString[i]);
-          head = res;
-      } else {
-          res.next = new Node(numString[i]);
-          res = res.next;
-      }
+    if (res == null) {
+      res = new Node(parseInt(numString[i]));
+      head = res;
+    } else {
+      res.next = new Node(parseInt(numString[i]));
+      res = res.next;
+    }
   }
   return head;
 }
-
-let test1 = new Node(1);
-test1.add(2);
-
-console.log(printLinkedList(sumLists(test1, test1)));
 
 module.exports = sumLists;
