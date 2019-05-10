@@ -11,7 +11,9 @@ matrix.
 #74, Can you use O(N) additional space instead of O(N2)? What information do you really
 need from the list of cells that are zero?
 
-#702 Part 2: Try a sum of squares of the values.
+#102 You probably need some data storage to maintain a list of the rows and columns that
+need to be zeroed. Can you reduce the additional space usage to 0(1) by using the
+matrix itself for data storage?
 
 */
 
