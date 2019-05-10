@@ -27,3 +27,31 @@ test("rotate-matrix", () => {
     rotateMatrix(matrix3);
     expect(matrix3).toEqual(matrix3rotated);
 });
+
+
+/*
+
+n (matrix.length) = 5;
+---FIRST FOR---
+layer = 1;
+first = layer = 1;
+last = n - 1 - layer = 5 - 1 - 1 = 3;
+---SECOND FOR---
+i = first = 1;
+offset = i - first = 0; 
+top = matrix[first][i] = matrix[1][1]
+
+matrix[1][1] = matrix[3][1]   :   6 -> 16
+matrix[3][1] = matrix[3][3]   :   16 -> 18
+matrix[3][3] = matrix[1][3]   :   18 -> 8
+matrix[1][3] = top   :   8 -> 6
+
+
+i = 2
+offset = i - first = 2 - 1 = 1
+top = matrix[1][2] = 7
+
+matrix[1][2] = matrix[2][1]    :    7 -> 11
+
+
+*/
